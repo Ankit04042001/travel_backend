@@ -14,7 +14,7 @@ SECRET_KEY = os.environ['TRAVEL_SECRET']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('TRAVEL_DEBUG','') != 'False'
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['139.59.46.211','127.0.0.1']
 
 
 # Application definition
@@ -68,12 +68,24 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.psycopg2-binary',
+        'NAME': 'travel-backend',
+        'USER': 'travelBackendUser',
+        'PASSWORD': 'Sunny@2000',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
+
 
 
 # Password validation
