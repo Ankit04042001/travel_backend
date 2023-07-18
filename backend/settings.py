@@ -14,7 +14,7 @@ SECRET_KEY = os.environ['TRAVEL_SECRET']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('TRAVEL_DEBUG','') != 'False'
 
-ALLOWED_HOSTS = ['139.59.46.211','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['travel.kuchhbhi.in', '139.59.46.211','127.0.0.1','localhost']
 
 
 # Application definition
